@@ -24,7 +24,11 @@ function Comments(){
         <div>
             <p>Comments</p>
             <form onSubmit={(event) => addComments(event)}>
-                <input onChange={handleCommentsChange} type='text' placeholder='Comments'></input>
+                <input 
+                onChange={handleCommentsChange} 
+                type='text' 
+                placeholder='Comments'
+                data-testid="input"></input>
                 <button type='submit' data-testid='next'>Next</button>
             </form>
         </div>

@@ -24,7 +24,11 @@ function Feeling(){
         <div>
             <p>Feeling</p>
             <form onSubmit={(event) => addFeeling(event)}>
-                <input onChange={handleFeelingChange} type='text' placeholder='Feeling'></input>
+                <input 
+                onChange={handleFeelingChange} 
+                type='text' 
+                placeholder='Feeling'
+                data-testid="input"></input>
                 <button type='submit' data-testid='next'>Next</button>
             </form>
         </div>

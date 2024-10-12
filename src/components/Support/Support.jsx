@@ -24,7 +24,11 @@ function Support(){
         <div>
             <p>Support</p>
             <form onSubmit={(event) => addSupport(event)}>
-                <input onChange={handleSupportChange} type='text' placeholder='Support'></input>
+                <input 
+                onChange={handleSupportChange} 
+                type='text' 
+                placeholder='Support' 
+                data-testid="input"></input>
                 <button type='submit' data-testid='next'>Next</button>
             </form>
         </div>
