@@ -24,7 +24,10 @@ function Understanding(){
         <div>
             <p>Understanding</p>
             <form onSubmit={(event) => addUnderstanding(event)}>
-                <input onChange={handleUnderstandingChange} type='text' placeholder='Understanding'></input>
+                <input onChange={handleUnderstandingChange} 
+                type='text' 
+                placeholder='Understanding'
+                data-testid='input'></input>
                 <button type='submit' data-testid='next'>Next</button>
             </form>
         </div>
