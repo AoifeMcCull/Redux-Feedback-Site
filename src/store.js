@@ -36,10 +36,10 @@ const commentReducer = (state = '', action) =>
 
 const store = createStore(
   combineReducers({
-    feelingReducer,
-    understandingReducer,
-    supportReducer,
-    commentReducer
+    feeling: feelingReducer,
+    understanding: understandingReducer,
+    support: supportReducer,
+    comments: commentReducer
   }),
   applyMiddleware(logger),
 );

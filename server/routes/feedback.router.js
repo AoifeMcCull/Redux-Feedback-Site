@@ -3,8 +3,8 @@ const router = express.Router();
 const pool = require('../modules/pool')
 
 router.post('/', (req, res) => {
-    console.log('posting feedback!');
     let newFeedback = req.body;
+    console.log('posting feedback!', newFeedback);
     const queryText = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
     VALUES ($1, $2, $3, $4)`
     pool.query(queryText, [newFeedback.feeling, newFeedback.understanding, newFeedback.support, newFeedback.comments])
