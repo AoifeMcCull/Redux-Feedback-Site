@@ -2,11 +2,29 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool')
 
-
-// TODO: This route adds a new feedback entry
 router.post('/', (req, res) => {
-
+    console.log('posting feedback!');
+    let newFeedback = req.body;
+    const queryText = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
+    VALUES ($1, $2, $3, $4)`
+    pool.query(queryText, [newFeedback.feeling, newFeedback.understanding, newFeedback.support, newFeedback.comments])
+    .then((result) => {
+        res.sendStatus(201);
+    })
+    .catch((err) => {
+        console.log('error posting!', err)
+        res.sendStatus(500);
+    })
 })
+
+/*feedback object {
+  "feeling" INT not null, feeling: 4
+  "understanding" INT not null, understanding: 3
+  "support" INT not null, support: 2
+  "comments" text, comments: 'foo'
+}
+  
+   */
 
 
 // DO NOT EDIT THIS ROUTE
