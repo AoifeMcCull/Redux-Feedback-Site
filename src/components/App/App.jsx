@@ -10,7 +10,7 @@ import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
-
+import EndScreen from '../EndScreen/EndScreen'
 
 function App() {
 
@@ -27,6 +27,7 @@ function App() {
           <Route path='/Support' component={Support} />
           <Route path='/Comments' component={Comments} />
           <Route path='/Review' component={Review} />
+          <Route path='/EndScreen' component={EndScreen} />
         </Switch>
       </Router>
       

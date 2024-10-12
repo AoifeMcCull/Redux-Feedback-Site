@@ -1,11 +1,12 @@
 import { useSelector } from "react-redux";
 import axios from "axios";
-
+import { useHistory } from "react-router-dom";
 function Review(){
-    const userFeeling = useSelector(store => store.feeling)
-    const userUnderstanding = useSelector(store => store.understanding)
-    const userSupport = useSelector(store => store.support)
-    const userComments = useSelector(store => store.comments)
+    const userFeeling = useSelector(store => store.feeling);
+    const userUnderstanding = useSelector(store => store.understanding);
+    const userSupport = useSelector(store => store.support);
+    const userComments = useSelector(store => store.comments);
+    const history = useHistory();
 
     const feedbackObject = {
         feeling: userFeeling,
@@ -34,7 +35,7 @@ function Review(){
             <p>Support: {userSupport}</p>
             <p>Comments: {userComments}</p>
 
-            <button onClick={sendFeedback}>Submit</button>
+            <button onClick={sendFeedback} data-testid="next">Submit</button>
         </div>
     )
 }
