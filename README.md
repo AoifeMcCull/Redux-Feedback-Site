@@ -1,9 +1,8 @@
-# Project Name
+# Redux Feedback Site
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+This is a website that collects user feedback on their feelings, understanding, level of support, and comments. It stores their inputs cross-site using Redux, posts them to a database using Axios, and it's using routed React components to render the site and its pages.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+![image](https://github.com/user-attachments/assets/3c280dec-8041-4df9-a389-4d155fcd4834)
